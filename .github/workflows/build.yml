@@ -59,13 +59,9 @@ jobs:
       run: |
 
         if [[ "${{ runner.os }}" == "Linux" ]] ; then
-
           sudo apt-get update -qq
-
           sudo apt-get install -y \
-
             libx11-dev libxcursor-dev libxi-dev
-
         fi
 
     - name: Generating Makefiles
@@ -75,13 +71,9 @@ jobs:
       run: |
 
         if [[ "${{ runner.os }}" == "Windows" ]] ; then
-
           export enable_ccache=off
-
         else
-
           export enable_ccache=on
-
         fi
 
         curl -L https://github.com/blueloveTH/aseprite/releases/download/v0.01/skia.zip --output skia.zip
